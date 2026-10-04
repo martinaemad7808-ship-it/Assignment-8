@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff">
+  <meta name="description" content="Your daily meal inspiration">
+  <title>What's For Dinner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="What's For Dinner home">
+      <span class="brand-icon" aria-hidden="true">🍴</span>
+      <span class="brand-copy"><strong>What's For Dinner</strong><small>Your daily meal inspiration</small></span>
+    </a>
+    <button class="menu-button" id="menu-button" aria-label="Open menu" 
+    aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="mobile-menu" id="mobile-menu"><a href="#recipe">Today's Recipe</a><a href="#recipe-tabs">Recipe Details</a></nav>
+  </header>
+
+  <main class="recipe-shell" id="recipe">
+    <article class="recipe-card">
+         <section class="photo" id="recipe-photo" aria-label="Recipe photo">
+        <img id="recipe-image" src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1500&q=85" alt="A bowl of soup garnished with herbs and seeds">
+        <div class="rating"><span class="star">★</span><strong id="rating-score">4.7</strong><span id="rating-count">(267 reviews)</span></div>
+        <div class="quick-stats">
+          <div class="quick-stat"><span class="quick-icon prep-icon">◷</span><small>Prep Time</small><strong id="prep-time">15 min</strong></div>
+          <div class="quick-stat"><span class="quick-icon cook-icon">♨</span><small>Cook Time</small><strong id="cook-time">60 min</strong></div>
+          <div class="quick-stat"><span class="quick-icon serve-icon">♟</span><small>Servings</small><strong id="servings">4 people</strong></div>
+        </div>
+      </section>
+
+      <div class="recipe-content">
+        <div class="actions"><button class="icon-button" id="save-button" aria-label="Save recipe" title="Save recipe"></button><button class="icon-button" id="share-button" aria-label="Share recipe" title="Share recipe"></button></div>
+        <div class="tags"><span class="tag tag-level" id="difficulty">Intermediate</span><span class="tag tag-cuisine" id="cuisine">Mediterranean</span></div>
+        <h1 id="recipe-name">French Onion Soup</h1>
+        <p class="description" id="recipe-description">Rich beef broth with caramelized onions and melted cheese</p>
+
+        <aside class="time-warning" id="time-warning"><span class="warning-icon">!</span><div><strong>Extended Preparation Time</strong><p>This recipe requires more than 45 minutes to prepare. Plan accordingly!</p></div></aside>
+
+        <nav class="tabs" id="recipe-tabs" aria-label="Recipe sections" role="tablist">
+          <button class="tab active" data-tab="ingredients" role="tab" aria-selected="true"><span>☷</span> Ingredients</button>
+          <button class="tab" data-tab="instructions" role="tab" aria-selected="false"><span>▤</span> Instructions</button>
+          <button class="tab" data-tab="nutrition" role="tab" aria-selected="false"><span>◕</span> Nutrition</button>
+          <button class="tab" data-tab="tips" role="tab" aria-selected="false"><span>♟</span> Chef's Tips</button>
+        </nav>
+        <section class="tab-content" id="tab-content" role="tabpanel"></section>
+        <div class="bottom-rule"></div>
+        <button class="another-button" id="another-recipe"><span>⟳</span> Try Another Recipe</button>
+      </div>
+    </article>
+     </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./index.js"></script>
+</body>
+</html>
